@@ -5,10 +5,6 @@
  */
 package View;
 
-import Controller.GerenciaControladoras;
-import Model.Pessoa;
-import javax.swing.JOptionPane;
-
 /**
  *
  * @author Pedro
@@ -16,7 +12,7 @@ import javax.swing.JOptionPane;
 public class TelaDeCadastro extends javax.swing.JFrame {
 
     /**
-     * Creates new form TelaDeLogin
+     * Creates new form TelaDeCadastro
      */
     public TelaDeCadastro() {
         initComponents();
@@ -32,123 +28,67 @@ public class TelaDeCadastro extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        campoDeLogin = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
-        campoDeSenha = new javax.swing.JPasswordField();
-        botaoDeEntrar = new javax.swing.JButton();
-        BotaoDeCadastro = new javax.swing.JButton();
+        campoDeNome = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("TELA DE LOGIN");
 
         jLabel1.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 153, 102));
-        jLabel1.setText("LOGIN");
-
-        jLabel2.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 153, 51));
-        jLabel2.setText("SENHA");
-
-        botaoDeEntrar.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
-        botaoDeEntrar.setText("ENTRAR");
-        botaoDeEntrar.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        botaoDeEntrar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botaoDeEntrarActionPerformed(evt);
-            }
-        });
-
-        BotaoDeCadastro.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
-        BotaoDeCadastro.setText("FAZER CADASTRO");
-        BotaoDeCadastro.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        BotaoDeCadastro.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BotaoDeCadastroActionPerformed(evt);
-            }
-        });
+        jLabel1.setText("NOME:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(127, 127, 127)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1)
-                            .addComponent(campoDeLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(campoDeSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel2)
-                            .addComponent(BotaoDeCadastro, javax.swing.GroupLayout.PREFERRED_SIZE, 301, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(197, 197, 197)
-                        .addComponent(botaoDeEntrar, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(127, Short.MAX_VALUE))
+                .addGap(16, 16, 16)
+                .addComponent(jLabel1)
+                .addGap(18, 18, 18)
+                .addComponent(campoDeNome, javax.swing.GroupLayout.PREFERRED_SIZE, 401, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(141, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(campoDeLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(29, 29, 29)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(campoDeSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(33, 33, 33)
-                .addComponent(botaoDeEntrar, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
-                .addComponent(BotaoDeCadastro, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(39, 39, 39))
+                .addGap(25, 25, 25)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(campoDeNome, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(330, Short.MAX_VALUE))
         );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-
-    private void botaoDeEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoDeEntrarActionPerformed
-
-        String login = campoDeLogin.getText();
-        String senha = String.valueOf(campoDeSenha.getPassword());
-
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
         try {
-            GerenciaControladoras gerenciaControladoras = new GerenciaControladoras();
-            Pessoa pessoaLogada = gerenciaControladoras.fazLogin(login, senha);
-
-            if (pessoaLogada != null) {
-                JOptionPane.showMessageDialog(null, "Login Realizado Com Sucesso!" + "\n"
-                        + "Logado Como: " + pessoaLogada.getTipoUsuario());
-                limparCamposDeLogin();
-            } else {
-                JOptionPane.showMessageDialog(null, "Usuario Nao Enconrado / Inexistente!");
-                limparCamposDeLogin();
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
             }
-
-            
-        } catch (Exception e) {
-             JOptionPane.showMessageDialog(null, "Erro Ao Fazer Login");
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(TelaDeCadastro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(TelaDeCadastro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(TelaDeCadastro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(TelaDeCadastro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
 
-       
-    }//GEN-LAST:event_botaoDeEntrarActionPerformed
-
-    private void BotaoDeCadastroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoDeCadastroActionPerformed
-
-        String nomePessoa;
-        String cpf;
-        String enderecoPessoa;
-        String loginPessoa;
-        String senhaPessoa;
-        String telefonePessoa;
-       
-        
-        
-    }//GEN-LAST:event_BotaoDeCadastroActionPerformed
-
-    public static void main(String[] args) {
+        /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new TelaDeCadastro().setVisible(true);
@@ -156,26 +96,8 @@ public class TelaDeCadastro extends javax.swing.JFrame {
         });
     }
 
-    public void exibirTelaDeLogin() {
-
-    }
-
-    public void limparCamposDeLogin() {
-        campoDeLogin.setText("");
-        campoDeSenha.setText("");
-    }
-
-    public void exibirMensagemDeErroNoLogin() {
-
-    }
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton BotaoDeCadastro;
-    private javax.swing.JButton botaoDeEntrar;
-    private javax.swing.JTextField campoDeLogin;
-    private javax.swing.JPasswordField campoDeSenha;
+    private javax.swing.JTextField campoDeNome;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
-
 }
