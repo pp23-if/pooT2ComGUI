@@ -153,19 +153,19 @@ public class TelaDeLogin extends javax.swing.JFrame {
         });
     }
 
-    public void exibirTelaDeLogin() {
-
+ 
+    public void selecionaTelaConformeTipoDeUsuario(Pessoa pessoa)
+    {
+        
     }
-
+    
+    
     public void limparCamposDeLogin() {
         campoDeLogin.setText("");
         campoDeSenha.setText("");
     }
 
-    public void exibirMensagemDeErroNoLogin() {
-
-    }
-
+  
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BotaoDeCadastro;
     private javax.swing.JButton botaoDeEntrar;
