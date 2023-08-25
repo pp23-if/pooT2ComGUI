@@ -1,27 +1,22 @@
 package Controller;
 
-import Model.Admnistrador;
 import Model.AdmnistradorDAO;
 import Model.CalendarioSistema;
 import Model.ConsultaDAO;
 import Model.FinanceiroAdmDAO;
 import Model.FinanceiroMedicoDAO;
-import Model.Franquia;
 import Model.FranquiaDAO;
 import Model.InfoConsultaDAO;
-import Model.Medico;
 import Model.MedicoDAO;
 import Model.Pessoa;
 import Model.PessoaDAO;
 import Model.ProcedimentoDAO;
-import Model.UnidadeFranquia;
 import Model.UnidadeFranquiaDAO;
-import java.util.Scanner;
 
 public class GerenciaControladoras {
 
     
-    /*Instanciando a Classe de Validacao de dads.*/
+    /*Instanciando a Classe de Validacao de dados.*/
     ValidacaoEntradaDados vd = new ValidacaoEntradaDados();
 
     /*Instanciando o Calendario Do Sistema*/

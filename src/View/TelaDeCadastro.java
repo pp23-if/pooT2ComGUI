@@ -192,7 +192,8 @@ public class TelaDeCadastro extends javax.swing.JFrame {
                 if(gerenciaControladoras.cadastrarPessoa(nomePessoa, cpf, enderecoPessoa, telefonePessoa, 
                         loginPessoa, senhaPessoa) == true)
                 {
-                   JOptionPane.showMessageDialog(null, "Cadastro Realizado Com Sucesso!");  
+                   JOptionPane.showMessageDialog(null, "Cadastro Realizado Com Sucesso!"); 
+                   limparCamposDeCadastro();
                 }
                 else
                 {
