@@ -45,9 +45,13 @@ public class TelaDeLogin extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(0, 153, 102));
         jLabel1.setText("LOGIN");
 
+        campoDeLogin.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+
         jLabel2.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 153, 51));
         jLabel2.setText("SENHA");
+
+        campoDeSenha.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
         botaoDeEntrar.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
         botaoDeEntrar.setText("ENTRAR");
@@ -99,9 +103,9 @@ public class TelaDeLogin extends javax.swing.JFrame {
                 .addComponent(campoDeSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(33, 33, 33)
                 .addComponent(botaoDeEntrar, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
+                .addGap(36, 36, 36)
                 .addComponent(BotaoDeCadastro, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(39, 39, 39))
+                .addContainerGap(50, Short.MAX_VALUE))
         );
 
         pack();
@@ -137,15 +141,8 @@ public class TelaDeLogin extends javax.swing.JFrame {
 
     private void BotaoDeCadastroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoDeCadastroActionPerformed
 
-        String nomePessoa;
-        String cpf;
-        String enderecoPessoa;
-        String loginPessoa;
-        String senhaPessoa;
-        String telefonePessoa;
-       
-        
-        
+        TelaDeCadastro telaDeCadastro = new TelaDeCadastro();
+        telaDeCadastro.setVisible(true);
     }//GEN-LAST:event_BotaoDeCadastroActionPerformed
 
     public static void main(String[] args) {

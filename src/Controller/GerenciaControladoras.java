@@ -52,44 +52,11 @@ public class GerenciaControladoras {
             
     }
 
-    /*private void cadastrarPessoa() {
+    public boolean cadastrarPessoa(String nomePessoa, String cpf, String enderecoPessoa,
+            String telefonePessoa, String loginPessoa, String senhaPessoa) {
 
-        System.out.println("\nInforme o Nome da Pessoa: ");
-        String nomePessoa = scanner.nextLine();
-        nomePessoa = vd.validaString(nomePessoa);
-
-        System.out.println("\nInforme o Cpf da Pessoa: ");
-        String cpf = scanner.nextLine();
-        cpf = vd.validaString(cpf);
-
-        System.out.println("\nInforme o Endereco da Pessoa: ");
-        String enderecoPessoa = scanner.nextLine();
-        enderecoPessoa = vd.validaString(enderecoPessoa);
-
-        System.out.println("\nInforme o login da Pessoa: ");
-        String loginPessoa = scanner.nextLine();
-        loginPessoa = vd.validaString(loginPessoa);
-
-        System.out.println("\nInforme a Senha da Pessoa: ");
-        String senhaPessoa = scanner.nextLine();
-        senhaPessoa = vd.validaString(senhaPessoa);
-
-        System.out.println("\nInforme o Telefone da Pessoa: ");
-        String telefonePessoa = scanner.nextLine();
-        telefonePessoa = vd.validaString(telefonePessoa);
-
-        String tipoUsuario = "Paciente";
-
-        boolean existePessoa;
-        boolean adicionado;
-
-        existePessoa = pessoaDAO.verificaSePessoaExiste(loginPessoa, cpf);
-
-        if (existePessoa == true) {
-            System.out.println("\nPessoa ja Cadastrada");
-
-        } else {
-
+            boolean adicionado;
+    
             Pessoa pessoa = new Pessoa();
 
             pessoa.setNomePessoa(nomePessoa);
@@ -98,22 +65,22 @@ public class GerenciaControladoras {
             pessoa.setTelefonePessoa(telefonePessoa);
             pessoa.setLoginPessoa(loginPessoa);
             pessoa.setSenhaPessoa(senhaPessoa);
-            pessoa.setTipoUsuario(tipoUsuario);
+            pessoa.setTipoUsuario("Paciente");
             pessoa.setHabilitado(true);
             pessoa.setDataCriacao(calendarioSistema.getDataHoraSistema());
 
             adicionado = pessoaDAO.inserePessoaNoBancoDeDados(pessoa);
 
-            if (adicionado == true) {
-                System.out.println("\nPessoa Cadastrada Com Sucesso!!!");
-            } else {
-                System.out.println("\nNao Foi Possivel Cadastrar a Pessoa.");
-            }
-        }
-    }*/
+        return adicionado == true;
+    }
 
     
-   
+    public boolean verificaSePessoaExiste(String loginPessoa, String Cpf)
+    {
+       boolean existePessoa = pessoaDAO.verificaSePessoaExiste(loginPessoa, Cpf);
+       
+        return existePessoa == true;
+    }
     
     public Pessoa fazLogin(String login, String senha) {
         
